@@ -1,13 +1,19 @@
-let license__radio = document.querySelector('.license__radio');
-let license__item = document.querySelector('.license__item');
+let licenseItems = document.querySelectorAll('.license__item');
 
+function removeActiveClasses() {
+    licenseItems.forEach(function (licenseItem) {
+        licenseItem.classList.remove('license__item--active');
+    });
+}
 
-license__radio.onclick = function () {
-    if (license__item.classList.contains('license__item--notActive')) {
-        license__item.classList.remove('license__item--notActive');
-        license__item.classList.add('license__item--active');
-    } else {
-        license__item.classList.remove('license__item--active');
-        license__item.classList.add('license__item--notActive');
-    }
-};
+licenseItems.forEach(function (licenseItem) {
+    let licenseRadio = licenseItem.querySelector('.license__radio');
+
+    licenseRadio.onchange = function () {
+        removeActiveClasses();
+
+        if (!licenseItem.classList.contains('license__item--active')) {
+            licenseItem.classList.add('license__item--active');
+        }
+    };
+});

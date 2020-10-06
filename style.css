@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('fonts/bebasneueregular.woff2') format('woff2'), url('fonts/bebasneueregular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     width: 100%;
     margin: 0;
@@ -46,14 +53,13 @@ body {
 
 .license__item:active {
     background-color: #ebf4f7;
-    border: 1px solid #b8d7e2;
+    box-shadow: 0 0 0 1px #b8d7e2;
 }
 
 .license__item--active {
     background-color: #ebf4f7;
-    border: 1px solid #b8d7e2;
+    box-shadow: 0 0 0 1px #b8d7e2;
 }
-
 
 .license__radio {
     position: absolute;
@@ -81,13 +87,17 @@ body {
     background-position: center center;
     background-size: 50% 50%;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .license__radio:checked+label::before {
     background-color: #ebf4f7;
+    background-image: url("img/blue-circle.png");
+    background-size: 12px 12px;
     border: 5px solid #34648e;
 }
 
+.license__radio:not(:checked):not(:disabled)+label:focus::before,
 .license__radio:not(:checked):not(:disabled)+label:hover::before {
     border-color: #34648e;
 }
@@ -104,12 +114,13 @@ body {
 
 .license__plan,
 .license__totalSum {
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', "Arial", sans-serif;
     letter-spacing: 0.05em;
 }
 
 .license__plan {
     font-size: 22px;
+    cursor: pointer;
 }
 
 .license__description {
@@ -132,6 +143,18 @@ body {
 
 .licenses__amount {
     margin-right: 100px;
+}
+
+select {
+    position: relative;
+    width: 58px;
+    height: 28px;
+
+    border: 2px solid #8dafe6;
+    border-radius: 10%;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 12px;
 }
 
 .license__totalSum {
@@ -183,11 +206,20 @@ body {
     border: none;
     border-radius: 30px;
     box-sizing: border-box;
+    outline: none;
+}
+
+.button:focus,
+.button:hover {
+    background-color: #216d2c;
+}
+
+.button:active {
+    background-color: #14411b;
 }
 
 .license__selectedPlan {
     text-align: center;
     margin: 0;
     padding: 0;
-
 }

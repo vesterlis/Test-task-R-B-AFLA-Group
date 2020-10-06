@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <title>Окно лицензий</title>
+    </head>
+
+    <body>
+        <div class="license licensePosition">
+            <div class="license__wrapper">
+                <form class="license__form" action="#" method="POST">
+                    <div class="license__list">
+                        <div class="license__item license__item--notActive">
+                            <input class="license__radio" type="radio" name="license-plan" value="License plan #1"
+                                id="License-plan-1">
+                            <label for="License-plan-1">
+                                <span class="license__plan">License plan #1</span>
+                            </label>
+                            <span class="license__description">$13 per license</span>
+                        </div>
+                        <div class="license__item license__item--notActive">
+                            <input class="license__radio" type="radio" name="license-plan" value="License plan #2"
+                                id="License-plan-2">
+                            <label for="License-plan-2">
+                                <span class="license__plan">License plan #2</span>
+                            </label>
+                            <span class="license__description">$22 per license</span>
+                        </div>
+                        <div class="license__item license__item--notActive">
+                            <input class="license__radio" type="radio" name="license-plan" value="License plan #3"
+                                id="License-plan-3">
+                            <label for="License-plan-3">
+                                <span class="license__plan">License plan #3</span>
+                            </label>
+                            <span class="license__description">$34 per license</span>
+                        </div>
+                    </div>
+                    <div class="license__number">
+                        <label class="licenses__amount">Number of licenses:
+                            <select name="license-select">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="license__totalSum">
+                        <span class="license__total">Total:</span>
+                        <span class="license__dollar">$340</span>
+                        <sup class="license__sup">Us</sup>
+                    </div>
+                    <div class="button-center">
+                        <button class="license__buyButton button" type="submit" name="buy">Buy now</button>
+                    </div>
+                    <p class="license__selectedPlan">Selected plan: #</p>
+                </form>
+            </div>
+        </div>
+        <script src="current-menu-item.js"></script>
+    </body>
+
+</html>

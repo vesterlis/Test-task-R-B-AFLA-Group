@@ -1,0 +1,193 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans Narrow", sans-serif;
+    color: #000000;
+
+    background-color: gray;
+}
+
+.license {
+    position: relative;
+    width: 564px;
+    height: 579px;
+    z-index: 10;
+
+    background-color: #f8f8f8;
+    border: 13px solid #ebebeb;
+    box-sizing: border-box;
+}
+
+.license__wrapper {
+    margin: 0 18px;
+}
+
+.license__form {
+    padding: 18px 0 48px 0;
+
+    box-sizing: border-box;
+}
+
+.license__list {
+    padding-bottom: 10px;
+
+    color: #787878;
+
+    border-bottom: 1px solid #cccccc;
+}
+
+.license__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 16px 18px 24px;
+}
+
+.license__item:active {
+    background-color: #ebf4f7;
+    border: 1px solid #b8d7e2;
+}
+
+.license__item--active {
+    background-color: #ebf4f7;
+    border: 1px solid #b8d7e2;
+}
+
+
+.license__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.license__radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.license__radio+label::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-right: 13px;
+
+    border: 5px solid #dadada;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    box-sizing: border-box;
+}
+
+.license__radio:checked+label::before {
+    background-color: #ebf4f7;
+    border: 5px solid #34648e;
+}
+
+.license__radio:not(:checked):not(:disabled)+label:hover::before {
+    border-color: #34648e;
+}
+
+.license__radio:not(:disabled):active+label::before {
+    border-color: #34648e;
+    background-color: #34648e;
+}
+
+.license__radio:disabled+label::before {
+    border-color: #919699;
+    background-color: lightgray;
+}
+
+.license__plan,
+.license__totalSum {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.05em;
+}
+
+.license__plan {
+    font-size: 22px;
+}
+
+.license__description {
+    padding-bottom: 7px;
+    align-self: flex-end;
+
+    font-size: 13px;
+    letter-spacing: 0.05em;
+}
+
+.license__number {
+    display: flex;
+    justify-content: center;
+    padding: 29px 0 29px 0;
+
+    font-size: 12px;
+
+    border-bottom: 1px solid #cccccc;
+}
+
+.licenses__amount {
+    margin-right: 100px;
+}
+
+.license__totalSum {
+    display: flex;
+    justify-content: center;
+    padding: 39px 0 0 0;
+
+    font-size: 22px;
+}
+
+.license__total {
+    color: #787878;
+}
+
+.license__dollar,
+.license__sup,
+.license__selectedPlan {
+    color: #3388a8;
+}
+
+.license__sup {
+    font-size: 16px;
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+}
+
+.license__buyButton {
+    margin: 18px auto 51px auto;
+}
+
+.button {
+    display: inline-block;
+    width: 190px;
+    height: 48px;
+    padding: 12px 10px 10px 10px;
+
+
+    font-size: 14px;
+    line-height: normal;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: #33a845;
+    border: none;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.license__selectedPlan {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
